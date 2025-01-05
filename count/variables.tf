@@ -3,7 +3,17 @@ variable "ami_id" {
   default = "ami-0b4f379183e5706b9"
 }
 
-variable "ec2_instance" {
+variable "instances_names" {
   type = list
   default = ["mongodb","redis","mysql","rabbitmq","catalogue","user","cart","shipping","payment","dispatch","web"]
+}
+
+variable "zone_id" {
+  type = string
+  default = "Z00383512RFXDS653HVHZ"
+}
+
+variable "domain_name" {
+  type = string
+  default = "jella.fun"
 }
