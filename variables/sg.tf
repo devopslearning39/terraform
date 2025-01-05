@@ -18,5 +18,7 @@ resource "aws_security_group" "allow_all" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = var.sg_tag
+  tags = {
+    Name = "allow_all_traffic_jp"
+  }
 }

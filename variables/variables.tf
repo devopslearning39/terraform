@@ -43,11 +43,3 @@ variable "cidr_blocks" {
   type = list
   default = ["0.0.0.0/0"]
 }
-
-variable "sg_tag" {
-  type = map
-  default = {
-    name = "allow_all_traffic_jp"
-    terraform = "true"
-  }
-}
