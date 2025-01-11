@@ -1,4 +1,4 @@
-resource "aws_instance" "web" {
+/* resource "aws_instance" "web" {
 #   count = 11
   count = length(var.instance_names)
   ami           = var.ami_id
@@ -17,4 +17,15 @@ resource "aws_route53_record" "www" {
   type    = "A"
   ttl     = 1
   records = [local.ip]
+} */
+
+# ########
+
+ resource "aws_instance" "web" {
+  ami           = var.ami_id
+  instance_type = local.instance_type
+
+  tags = {
+    Name = "praveen"
+  }
 }
